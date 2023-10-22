@@ -144,21 +144,21 @@ router.patch(
   })
 );
 
-// router.delete(
-//   "/:id",
-//   asyncHandler(async (req, res) => {
-//     const userId = req.params.id;
-//     const find = await prisma.user.findFirst({
-//       cursor: { id: userId },
-//     });
+router.delete(
+  "/:id",
+  asyncHandler(async (req, res) => {
+    const postId = req.params.id;
+    const find = await prisma.post.findFirst({
+      cursor: { id: postId },
+    });
 
-//     if (!find) {
-//       throw new Error("User not available");
-//     }
+    if (!find) {
+      throw new Error("Post not available");
+    }
 
-//     const user = await prisma.user.delete({ where: { id: userId } });
-//     res.json(user);
-//   })
-// );
+    const deletedPost = await prisma.post.delete({ where: { id: postId } });
+    res.json(deletedPost);
+  })
+);
 
 export default router;

@@ -1,5 +1,5 @@
 {
-  "name": "prisma-bazaar-api",
+  "name": "prisma-blog-api",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,6 +9,11 @@
   "keywords": [],
   "author": "Nabed Khan",
   "license": "ISC",
+  "dependencies": {
+    "@prisma/client": "^5.2.0",
+    "express": "^4.18.2",
+    "express-async-handler": "^1.2.0"
+  },
   "devDependencies": {
     "@types/express": "^4.17.17",
     "@types/node": "^20.5.9",
@@ -17,11 +22,5 @@
     "prisma": "^5.2.0",
     "ts-node": "^10.9.1",
     "typescript": "^5.2.2"
-  },
-  "dependencies": {
-    "@prisma/client": "^5.2.0",
-    "express": "^4.18.2",
-    "express-async-errors": "^3.1.1",
-    "express-async-handler": "^1.2.0"
   }
 }
